@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI CyberCoach | ThreatLens</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="dashboard.html"><span class="brand-icon">🛡️</span> ThreatLens</a>
+      <nav class="side-nav">
+        <a href="dashboard.html">⌂ <span>Dashboard</span></a><a href="learn.html">📚 <span>Learn</span></a><a href="mission.html">🎯 <span>Missions</span></a><a href="quiz.html">🧠 <span>Quizzes</span></a><a class="active" href="coach.html">🤖 <span>AI Coach</span></a><a href="badges.html">🏆 <span>Badges</span></a><a href="profile.html">👤 <span>My Profile</span></a><a href="join-class.html">👥 <span>Join Class</span></a><a id="teacherNav" href="teacher.html" class="hidden">👨‍🏫 <span>Teacher Dashboard</span></a>
+      </nav>
+    </aside>
+    <main class="main-content">
+      <header class="topbar"><div><span class="muted">Personalized guidance</span><h1>AI CyberCoach 🤖</h1></div><span class="online"><i></i> Online</span></header>
+      <div class="coach-page">
+        <section class="chat-card">
+          <div id="chatMessages" class="chat-messages">
+            <div class="chat-row bot"><div class="chat-avatar">🤖</div><div class="bubble">Hi! I'm CyberCoach. Ask me about phishing, privacy, cyberbullying or a suspicious online situation.</div></div>
+            <div class="chat-row bot"><div class="chat-avatar">🤖</div><div class="bubble">Try asking: <b>“How can I identify a fake internship?”</b></div></div>
+          </div>
+          <div class="suggestions">
+            <button data-question="How can I identify a fake internship?">Fake internship?</button>
+            <button data-question="What information should I keep private?">Privacy tips</button>
+            <button data-question="What should I do about cyberbullying?">Cyberbullying</button>
+            <button data-question="How do I check a suspicious link?">Check a link</button>
+          </div>
+          <form id="chatForm" class="chat-input"><input id="chatInput" placeholder="Ask CyberCoach anything..." required><button class="btn" type="submit">Send</button></form>
+        </section>
+        <aside class="insight-card">
+          <span class="eyebrow">AI LEARNING INSIGHT</span>
+          <h2>Your next best step</h2>
+          <p>Based on your current learning profile, practice <b>urgency-based phishing</b> next.</p>
+          <a href="mission.html?topic=phishing" class="btn">Start Practice →</a>
+          <hr>
+          <h3>How AI helps</h3>
+          <ul class="check-list"><li>Contextual hints</li><li>Mistake explanations</li><li>Adaptive difficulty</li><li>Personalized challenges</li></ul>
+        </aside>
+      </div>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

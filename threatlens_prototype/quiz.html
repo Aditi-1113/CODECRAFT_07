@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz | ThreatLens</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="dashboard.html"><span class="brand-icon">🛡️</span> ThreatLens</a>
+      <nav class="side-nav">
+        <a href="dashboard.html">⌂ <span>Dashboard</span></a><a href="learn.html">📚 <span>Learn</span></a><a href="mission.html">🎯 <span>Missions</span></a><a class="active" href="quiz.html">🧠 <span>Quizzes</span></a><a href="coach.html">🤖 <span>AI Coach</span></a><a href="badges.html">🏆 <span>Badges</span></a><a href="profile.html">👤 <span>My Profile</span></a><a href="join-class.html">👥 <span>Join Class</span></a><a id="teacherNav" href="teacher.html" class="hidden">👨‍🏫 <span>Teacher Dashboard</span></a>
+      </nav>
+    </aside>
+    <main class="main-content">
+      <header class="topbar"><div><span class="muted">Quick assessment</span><h1>Cyber Safety Quiz 🧠</h1></div><span class="pill" id="quizCounter">Question 1 / 5</span></header>
+      <section class="quiz-card">
+        <div class="quiz-progress"><i id="quizProgress" style="width:20%"></i></div>
+        <span class="eyebrow" id="quizTopic">PHISHING</span>
+        <h2 id="questionText">Which of these is a common phishing warning sign?</h2>
+        <div id="options" class="options"></div>
+        <div id="quizFeedback" class="result-box hidden"></div>
+        <button id="nextQuestion" class="btn hidden">Next Question →</button>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

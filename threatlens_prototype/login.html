@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Started | ThreatLens</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="auth-shell">
+    <a class="brand auth-brand" href="index.html"><span class="brand-icon">🛡️</span> ThreatLens</a>
+    <div class="auth-card">
+      <div class="section-heading center"><span class="eyebrow">GET STARTED</span><h1>How do you want to learn?</h1><p>Choose a role and create your prototype profile.</p></div>
+
+      <form id="profileForm">
+        <div class="role-grid">
+          <label class="role-option">
+            <input type="radio" name="role" value="student" checked>
+            <span class="role-box"><b>🎓 Student</b><small>Learn, practice, earn badges and join a class.</small></span>
+          </label>
+          <label class="role-option">
+            <input type="radio" name="role" value="teacher">
+            <span class="role-box"><b>👨‍🏫 Teacher</b><small>Learn, manage classes and assign tasks.</small></span>
+          </label>
+          <label class="role-option">
+            <input type="radio" name="role" value="individual">
+            <span class="role-box"><b>🧑 Individual Learner</b><small>Learn independently without a class or teacher.</small></span>
+          </label>
+        </div>
+
+        <label class="form-label">Your name
+          <input id="userName" type="text" placeholder="e.g. Aditi" required>
+        </label>
+
+        <div id="individualPasswordFields" class="hidden">
+          <label class="form-label">Password
+            <input id="individualPassword" type="password" placeholder="Create a password" minlength="6" autocomplete="new-password">
+          </label>
+          <label class="form-label">Confirm password
+            <input id="individualPasswordConfirm" type="password" placeholder="Re-enter password" minlength="6" autocomplete="new-password">
+          </label>
+          <p class="muted small-note">Individual Learner profiles use a password to keep each learner's progress separate.</p>
+        </div>
+
+        <label class="form-label">What do you want to practice?
+          <select id="focusTopic">
+            <option value="all">All topics</option>
+            <option value="phishing">Phishing</option>
+            <option value="privacy">Privacy</option>
+            <option value="cyberbullying">Cyberbullying</option>
+          </select>
+        </label>
+
+        <button class="btn full" type="submit">Continue to ThreatLens →</button>
+      </form>
+
+      <div class="auth-links">
+        <a href="index.html">← Back to home</a>
+        <a href="join-class.html">Already have a class code?</a>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

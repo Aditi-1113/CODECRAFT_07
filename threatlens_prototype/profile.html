@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile | ThreatLens</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="dashboard.html"><span class="brand-icon">🛡️</span> ThreatLens</a>
+      <nav class="side-nav">
+        <a href="dashboard.html">⌂ <span>Dashboard</span></a>
+        <a href="learn.html">📚 <span>Learn</span></a>
+        <a href="mission.html">🎯 <span>Missions</span></a>
+        <a href="quiz.html">🧠 <span>Quizzes</span></a>
+        <a href="coach.html">🤖 <span>AI Coach</span></a>
+        <a href="badges.html">🏆 <span>Badges</span></a>
+        <a class="active" href="profile.html">👤 <span>My Profile</span></a>
+        <a href="join-class.html">👥 <span>Join Class</span></a>
+        <a id="teacherNav" href="teacher.html" class="hidden">👨‍🏫 <span>Teacher Dashboard</span></a>
+      </nav>
+      <a href="login.html" class="side-bottom">↪ Switch profile</a>
+    </aside>
+
+    <main class="main-content" id="profilePage">
+      <header class="topbar">
+        <div><span class="muted">Your personal learning space</span><h1>My Profile 👤</h1></div>
+        <span class="pill" id="profilePageRole">Student</span>
+      </header>
+
+      <section class="profile-banner profile-main-card">
+        <div class="avatar big" id="profilePageAvatar">L</div>
+        <div>
+          <span class="eyebrow">INDIVIDUAL PROFILE</span>
+          <h2 id="profilePageName">Learner</h2>
+          <p><span id="profilePageLevel">Level 1</span> • <span id="profilePageClass">Individual learning</span></p>
+        </div>
+        <div class="profile-xp">
+          <b><span id="profilePageXP">0</span> XP</b>
+          <div class="progress-bar"><i id="profilePageXPBar" style="width:0%"></i></div>
+          <small>Personal progress is saved separately for this profile.</small>
+        </div>
+      </section>
+
+      <section class="stats-grid profile-stats">
+        <div class="stat-card"><span>Missions Completed</span><strong id="profilePageMissions">0</strong><small>Your completed scenarios</small></div>
+        <div class="stat-card"><span>Quiz Correct</span><strong id="profilePageQuiz">0</strong><small>Correct answers</small></div>
+        <div class="stat-card"><span>Learning Streak</span><strong>🔥 <span id="profilePageStreak">0 days</span></strong><small>Keep practicing</small></div>
+        <div class="stat-card"><span>Badges Progress</span><strong id="profilePageBadges">0</strong><small>Achievements unlocked</small></div>
+      </section>
+
+      <section class="section-heading"><span class="eyebrow">PERSONAL PROGRESS</span><h2>Topic mastery</h2><p class="muted">Your progress changes as you complete missions and learning activities.</p></section>
+      <section class="profile-topic-grid">
+        <article class="progress-card"><span>🎣</span><div><h3>Phishing</h3><div class="progress-bar"><i data-profile-progress="phishing" style="width:0%"></i></div><small data-profile-label="phishing">0% complete</small></div></article>
+        <article class="progress-card"><span>🔐</span><div><h3>Privacy</h3><div class="progress-bar"><i data-profile-progress="privacy" style="width:0%"></i></div><small data-profile-label="privacy">0% complete</small></div></article>
+        <article class="progress-card"><span>💬</span><div><h3>Cyberbullying</h3><div class="progress-bar"><i data-profile-progress="cyberbullying" style="width:0%"></i></div><small data-profile-label="cyberbullying">0% complete</small></div></article>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="coach-mini">
+          <div class="card-label">🎯 KEEP GOING</div>
+          <h3>Build your cyber-safety skills</h3>
+          <p>Complete role-specific and individual missions to grow this profile's XP, topic progress and achievements.</p>
+          <a href="mission.html" class="btn">Continue Missions →</a>
+        </article>
+        <article class="coach-mini">
+          <div class="card-label">🔄 SWITCH USER</div>
+          <h3>Another learner?</h3>
+          <p>Use a different name and role to create or return to that person's separate progress.</p>
+          <a href="login.html" class="text-link">Switch profile →</a>
+        </article>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

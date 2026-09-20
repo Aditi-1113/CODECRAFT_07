@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Achievements | ThreatLens</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="dashboard.html"><span class="brand-icon">🛡️</span> ThreatLens</a>
+      <nav class="side-nav">
+        <a href="dashboard.html">⌂ <span>Dashboard</span></a><a href="learn.html">📚 <span>Learn</span></a><a href="mission.html">🎯 <span>Missions</span></a><a href="quiz.html">🧠 <span>Quizzes</span></a><a href="coach.html">🤖 <span>AI Coach</span></a><a class="active" href="badges.html">🏆 <span>Badges</span></a><a href="join-class.html">👥 <span>Join Class</span></a><a id="teacherNav" href="teacher.html" class="hidden">👨‍🏫 <span>Teacher Dashboard</span></a>
+      </nav>
+    </aside>
+    <main class="main-content">
+      <header class="topbar"><div><span class="muted">Your progress starts here</span><h1>Achievements 🏆</h1></div><span class="pill">🔥 <span id="streakText">0 days</span></span></header>
+      <section class="profile-banner">
+        <div class="avatar big" id="badgeAvatar">A</div><div><span class="eyebrow">YOUR PROFILE</span><h2 id="badgeName">Learner</h2><p>Level <span id="badgeLevel">1</span> • Cyber Explorer</p></div><div class="profile-xp"><b><span id="badgeXP">0</span> XP</b><div class="progress-bar"><i id="badgeProgress" style="width:0%"></i></div><small><span id="badgeXP2">0</span> / 200 XP to next level</small></div>
+      </section>
+      <div class="section-heading row-heading"><div><span class="eyebrow">COLLECT THEM ALL</span><h2>Your badges</h2></div><span class="muted" id="badgeUnlockedText">0 / 6 unlocked</span></div>
+      <section class="badge-grid">
+        <article class="badge-card"><div class="badge-icon">🎣</div><h3>Phishing Detective</h3><p>Completed 5 phishing challenges.</p><span>LOCKED</span></article>
+        <article class="badge-card"><div class="badge-icon">🔐</div><h3>Privacy Guardian</h3><p>Scored 90%+ in privacy.</p><span>LOCKED</span></article>
+        <article class="badge-card"><div class="badge-icon">💙</div><h3>Cyber Kindness</h3><p>Complete the cyberbullying module.</p><span>LOCKED</span></article>
+        <article class="badge-card"><div class="badge-icon">🤖</div><h3>AI Learner</h3><p>Complete 3 AI-guided missions.</p><span>LOCKED</span></article>
+        <article class="badge-card"><div class="badge-icon">🧩</div><h3>Quiz Master</h3><p>Score 90% in a quiz.</p><span>LOCKED</span></article>
+        <article class="badge-card"><div class="badge-icon">🛡️</div><h3>Cyber Defender</h3><p>Complete all core modules.</p><span>LOCKED</span></article>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

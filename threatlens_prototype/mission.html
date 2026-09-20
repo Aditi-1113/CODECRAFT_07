@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Mission | ThreatLens</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="dashboard.html"><span class="brand-icon">🛡️</span> ThreatLens</a>
+      <nav class="side-nav">
+        <a href="dashboard.html">⌂ <span>Dashboard</span></a>
+        <a href="learn.html">📚 <span>Learn</span></a>
+        <a class="active" href="mission.html">🎯 <span>Missions</span></a>
+        <a href="quiz.html">🧠 <span>Quizzes</span></a>
+        <a href="coach.html">🤖 <span>AI Coach</span></a>
+        <a href="badges.html">🏆 <span>Badges</span></a><a href="profile.html">👤 <span>My Profile</span></a>
+        <a href="join-class.html">👥 <span>Join Class</span></a>
+        <a id="teacherNav" href="teacher.html" class="hidden">👨‍🏫 <span>Teacher Dashboard</span></a>
+      </nav>
+    </aside>
+    <main class="main-content">
+      <header class="topbar"><div><span class="muted">Cyber Missions • Decision training</span><h1 id="missionTitle">Real-life situations. Real skills. 🎯</h1></div><span class="pill" id="missionCounter">Choose a mission</span></header>
+      <div class="mission-layout">
+        <section>
+          <div class="mission-filters" aria-label="Mission categories">
+            <button class="mission-filter active" data-mission-filter="all">All</button>
+            <button class="mission-filter" data-mission-filter="student">Student</button>
+            <button class="mission-filter" data-mission-filter="teacher">Teacher</button>
+            <button class="mission-filter" data-mission-filter="common">Everyone</button>
+          </div>
+
+          <div id="missionList" class="mission-list"></div>
+
+          <div id="missionWorkspace" class="hidden">
+            <div class="scenario-card">
+              <div class="message-header"><span id="missionIcon">📩</span><div><b id="sender">career@google-internship.xyz</b><small id="missionMeta">Scenario</small></div><span class="risk" id="riskLabel">HIGH RISK</span></div>
+              <div class="message-body" id="messageBody"></div>
+            </div>
+            <div class="decision-box">
+              <div class="card-label">WHAT WOULD YOU DO?</div>
+              <div id="missionChoices"></div>
+              <div id="decisionResult" class="result-box hidden"></div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="coach-side">
+          <div class="coach-avatar">🤖</div><h3>CyberCoach</h3><p class="muted">Need a hint? I can guide you without giving away the answer.</p>
+          <button id="hintBtn" class="btn full hidden">Give me a hint</button>
+          <div id="hintBox" class="hint-box hidden"></div>
+          <a href="coach.html" class="text-link">Ask CyberCoach more →</a>
+        </aside>
+      </div>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | ThreatLens</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="dashboard.html"><span class="brand-icon">🛡️</span> ThreatLens</a>
+      <nav class="side-nav">
+        <a class="active" href="dashboard.html">⌂ <span>Dashboard</span></a>
+        <a href="learn.html">📚 <span>Learn</span></a>
+        <a href="mission.html">🎯 <span>Missions</span></a>
+        <a href="quiz.html">🧠 <span>Quizzes</span></a>
+        <a href="coach.html">🤖 <span>AI Coach</span></a>
+        <a href="badges.html">🏆 <span>Badges</span></a><a href="profile.html">👤 <span>My Profile</span></a>
+        <a href="join-class.html" id="joinClassNav">👥 <span>Join Class</span></a>
+        <a id="teacherNav" href="teacher.html" class="hidden">👨‍🏫 <span>Teacher Dashboard</span></a>
+      </nav>
+      <a href="login.html" class="side-bottom">↪ Switch profile</a>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div><span class="muted">Your Cyber Safety Journey</span><h1>Good morning, <span id="dashboardName">Learner</span> 👋</h1></div>
+        <div class="topbar-actions"><span class="pill" id="rolePill">Student</span><a class="avatar" href="profile.html" id="avatar">A</a></div>
+      </header>
+
+      <section class="stats-grid">
+        <div class="stat-card"><span>Current Level</span><strong id="levelText">Level 1</strong><small>Cyber Explorer</small></div>
+        <div class="stat-card"><span>Total XP</span><strong id="xpText">0</strong><small>Keep learning to level up</small></div>
+        <div class="stat-card"><span>Streak</span><strong>🔥 <span id="streakText">0 days</span></strong><small>Start your first learning day</small></div>
+        <div class="stat-card"><span>Badges</span><strong id="badgeCount">0</strong><small>View achievements →</small></div>
+      </section>
+
+      <section class="section-heading row-heading"><div><span class="eyebrow">YOUR PROGRESS</span><h2>Skill overview</h2></div><a href="learn.html" class="text-link">Continue learning →</a></section>
+      <section class="progress-grid">
+        <a class="progress-card" data-topic-progress="phishing" href="mission.html?topic=phishing"><span>🎣</span><div><h3>Phishing</h3><div class="progress-bar"><i style="width:0%"></i></div><small>0% complete</small></div></a>
+        <a class="progress-card" data-topic-progress="privacy" href="mission.html?topic=privacy"><span>🔐</span><div><h3>Privacy</h3><div class="progress-bar"><i style="width:0%"></i></div><small>0% complete</small></div></a>
+        <a class="progress-card" data-topic-progress="cyberbullying" href="mission.html?topic=cyberbullying"><span>💬</span><div><h3>Cyberbullying</h3><div class="progress-bar"><i style="width:0%"></i></div><small>0% complete</small></div></a>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="mission-highlight">
+          <div class="card-label">🔥 TODAY'S MISSION</div>
+          <h2>Can you identify this fake internship message?</h2>
+          <p>A recruiter promises a high-value internship but asks you to act within 30 minutes. Investigate the clues and decide what to do.</p>
+          <a href="mission.html" class="btn">Start Mission →</a>
+        </article>
+        <article class="coach-mini">
+          <div class="card-label">🤖 AI LEARNING INSIGHT</div>
+          <h3 id="insightTitle">Your next challenge</h3>
+          <p id="insightText">Practice urgency-based phishing messages to strengthen your detection skills.</p>
+          <a href="coach.html" class="text-link">Talk to CyberCoach →</a>
+        </article>
+      </section>
+
+
+      <section class="section-heading row-heading" style="margin-top:28px"><div><span class="eyebrow">ASSIGNED BY TEACHER</span><h2>My Tasks</h2></div></section>
+      <section id="studentTasks" class="dashboard-grid"></section>
+
+      <section class="quick-grid">
+        <a href="quiz.html" class="quick-card"><span>🧠</span><div><b>Quick Quiz</b><small>Test your cyber-safety knowledge</small></div></a>
+        <a href="badges.html" class="quick-card"><span>🏆</span><div><b>Achievements</b><small>See your XP and badges</small></div></a>
+        <a href="join-class.html" class="quick-card"><span>👥</span><div><b>Classroom</b><small>Join or view your class</small></div></a>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script><script>if(!requireLearnerRole()) {}</script>
+</body>
+</html>

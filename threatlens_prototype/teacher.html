@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teacher Dashboard | ThreatLens</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="teacher.html"><span class="brand-icon">🛡️</span> ThreatLens</a>
+      <nav class="side-nav">
+        <a href="teacher.html" class="active">⌂ <span>Teacher Dashboard</span></a>
+        <a href="learn.html">📚 <span>Learn</span></a>
+        <a href="mission.html">🎯 <span>Missions</span></a>
+        <a href="quiz.html">🧠 <span>Quizzes</span></a>
+        <a href="coach.html">🤖 <span>AI Coach</span></a>
+        <a href="badges.html">🏆 <span>My Badges</span></a>
+      </nav>
+      <a href="index.html" class="side-bottom" onclick="localStorage.removeItem('threatLensUser')">↪ Logout</a>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar"><div><span class="muted">Educator view</span><h1>Teacher Dashboard 👨‍🏫</h1></div><div class="topbar-actions"><span class="pill">Teacher</span><a class="avatar" href="badges.html">T</a></div></header>
+
+      <section class="teacher-hero">
+        <div><span class="eyebrow">CLASS MANAGEMENT</span><h2>Create and manage your classes</h2><p>New classes begin with <b>0 students</b>. Share the generated code with students to let them join.</p></div>
+        <div class="teacher-score"><span>Classes created</span><strong id="classCount">0</strong></div>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="table-card">
+          <div class="row-heading"><div><span class="eyebrow">CREATE CLASS</span><h2>Start a new class</h2></div></div>
+          <p class="muted">The class will be empty until students actually join using its code.</p>
+          <form id="createClassForm" style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px">
+            <input id="newClassName" type="text" placeholder="e.g. Cyber Safety - CSE A" required style="flex:1;min-width:240px">
+            <button class="btn" type="submit">Create Class →</button>
+          </form>
+        </article>
+        <article class="insight-card">
+          <span class="eyebrow">🤖 AI CLASS INSIGHT</span>
+          <h2>Use AI Coach to support learning.</h2>
+          <p>Teachers can also learn the same cyber-safety topics, while the class area stays focused on student participation.</p>
+          <a href="coach.html" class="btn full">Open AI Coach →</a>
+        </article>
+      </section>
+
+
+      <section class="table-card" style="margin-top:18px">
+        <div class="row-heading"><div><span class="eyebrow">TASK ASSIGNMENT</span><h2>Assign a task to students</h2></div><span class="pill">Teacher → Student</span></div>
+        <p class="muted">Create a task for a whole class or one joined student. Assigned tasks appear on the student's dashboard.</p>
+        <form id="assignmentForm" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px">
+          <select id="assignmentClass" required><option value="">Select class</option></select>
+          <select id="assignmentStudent"><option value="all">All students in class</option></select>
+          <input id="assignmentTitle" type="text" placeholder="Task title e.g. Complete Phishing Mission" required>
+          <select id="assignmentTopic"><option value="phishing">Phishing</option><option value="privacy">Privacy</option><option value="cyberbullying">Cyberbullying</option></select>
+          <input id="assignmentDue" type="date">
+          <button class="btn" type="submit">Assign Task →</button>
+        </form>
+        <div id="assignmentList" style="margin-top:16px"></div>
+      </section>
+
+      <section class="section-heading row-heading" style="margin-top:28px"><div><span class="eyebrow">YOUR CLASSES</span><h2>Classes & students</h2></div></section>
+      <section id="teacherClasses" class="dashboard-grid"></section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+  <script>
+    if (!requireRole('teacher')) {}
+    document.getElementById('createClassForm').addEventListener('submit', function(e){ e.preventDefault(); createClass(); });
+    document.getElementById('classCount').textContent = getClasses().length;
+    const oldRender = renderTeacherClasses;
+    renderTeacherClasses = function(){ oldRender(); document.getElementById('classCount').textContent = getClasses().length; };
+    renderTeacherClasses();
+    setupAssignments();
+  </script>
+</body>
+</html>
